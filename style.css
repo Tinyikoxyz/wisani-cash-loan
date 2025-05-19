@@ -243,3 +243,99 @@ footer {
     font-size: 14px;
     margin: 0;
 }
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+    }
+
+    .home-section .form-section {
+        position: static;
+        transform: none;
+        margin: 2rem auto 0;
+    }
+
+    .home-section .content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .why_choose_us .box-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-us {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us h2 {
+        grid-column: 1;
+    }
+
+    .contact-us .map {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .why_choose_us .box-section {
+        grid-template-columns: 1fr;
+    }
+
+    header .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .home-section {
+        height: 300px;
+    }
+
+    .home-section::after {
+        height: 300px;
+    }
+
+    .home-section .content h2 {
+        font-size: 24px;
+    }
+
+    .home-section .form-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    .home-section .content h2 {
+        font-size: 20px;
+    }
+
+    .why_choose_us .title {
+        font-size: 24px;
+    }
+
+    .home-section button,
+    .home-section .form-section form button {
+        width: 100%;
+    }
+
+    .footer-content h3 {
+        font-size: 20px;
+    }
+
+    .footer-content p,
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
