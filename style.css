@@ -15,6 +15,11 @@
 img{
     width: 100%;
 }
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
 /*header section*/
 header{
     width: 100%;
@@ -25,6 +30,10 @@ header{
     justify-content: space-around;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+header .logo img {
+    max-width: 100%;
+    height: auto;
+}
 a{
     color: #333;
 }
@@ -33,9 +42,9 @@ header .logo{
     
    
 }
-header .logo img{
+/* header .logo img{
     display: block;
-}
+} */
 header h2 .name{
     color: var(--main-color);
 }
@@ -254,7 +263,13 @@ footer {
         gap: 1rem;
         height: auto;
     }
-
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
     .home-section .form-section {
         position: static;
         transform: none;
@@ -283,12 +298,37 @@ footer {
     .contact-us .map {
         max-width: 100%;
     }
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 768px) {
+    .home-section .content {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        width: 90%;
+     }
+    .home-section .form-section {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 1rem;
+    }
+            
     .why_choose_us .box-section {
         grid-template-columns: 1fr;
     }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
 
     header .navbar {
         flex-direction: column;
@@ -309,6 +349,19 @@ footer {
 
     .home-section .form-section {
         width: 90%;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
     }
 }
 
