@@ -1,5 +1,3 @@
-const navbar = document.querySelector(".navbar");
-
-function toggleMenu() {
-    document.querySelector('.navbar').classList.toggle('active');
-  }
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  document.getElementById("navbar").classList.toggle("active");
+});
