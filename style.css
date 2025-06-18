@@ -286,6 +286,41 @@ footer {
     border-top: 1px solid #fff;
     padding-top: 10px;
 }
+.message-box {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.message-box .times {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
