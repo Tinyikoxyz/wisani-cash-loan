@@ -1,0 +1,23 @@
+<?php
+@include 'config.php';
+
+if (isset($_POST['submit'])) {
+    $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = mysqli_real_escape_string($conn, $filter_name);
+    $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+    $email = mysqli_real_escape_string($conn, $filter_email);
+    $filter_number = filter_var($_POST['number'], FILTER_SANITIZE_STRING);
+    $number = mysqli_real_escape_string($conn, $filter_number);
+
+    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE name = '$name' AND email = '$email'")
+        or die('Select query failed: ' . mysqli_error($conn));
+
+    if (mysqli_num_rows($select_users) > 0) {
+        $message[] = 'Thank you for visiting our website. We will be in touch.';
+    } else {
+        $insert = mysqli_query($conn, "INSERT INTO `users` (name, email, number) VALUES ('$name', '$email', '$number')")
+            or die('Insert failed: ' . mysqli_error($conn));
+        $message[] = 'Thank you for visiting our website. We will be in touch.';
+    }
+}
+?>
